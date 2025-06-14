@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'PT Sans', Arial, Helvetica, sans-serif; /* Added PT Sans as primary */
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 94%; /* Light Gray (#F0F0F0) */
+    --foreground: 20 14% 8%; /* Very Dark Gray (almost black for text on light gray) */
+    
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 20 14% 8%; /* Very Dark Gray */
+    
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 20 14% 8%; /* Very Dark Gray */
+    
+    --primary: 27 100% 50%; /* Mango Orange (#FF8000) */
+    --primary-foreground: 0 0% 100%; /* White */
+    
+    --secondary: 27 100% 90%; /* Light Mango/Peach (#FFE6CC) */
+    --secondary-foreground: 27 100% 25%; /* Darker Mango for text on light mango */
+    
+    --muted: 0 0% 85%; /* Slightly darker gray than background */
+    --muted-foreground: 0 0% 45%; /* Medium Gray */
+    
+    --accent: 33 90% 55%; /* Tangerine Orange (#f7931e) */
+    --accent-foreground: 0 0% 100%; /* White */
+    
+    --destructive: 0 72% 51%; /* Standard Red */
+    --destructive-foreground: 0 0% 98%; /* White */
+    
+    --border: 0 0% 85%; /* Light Gray Border */
+    --input: 0 0% 100%; /* White input background */
+    --input-border: 0 0% 80%; /* Slightly darker gray input border */
+    --ring: 27 100% 50%; /* Mango Orange for focus rings */
+    
+    --chart-1: 27 100% 50%; /* Primary - Mango Orange */
+    --chart-2: 33 90% 55%;  /* Accent - Tangerine */
+    --chart-3: 45 100% 50%; /* Yellow-Orange (#ffc300) */
+    --chart-4: 25 60% 50%;  /* Brownish Orange (#c77e33) */
+    --chart-5: 0 0% 60%;    /* Gray */
+    
+    --radius: 0.5rem;
+
+    /* Sidebar colors adjusted to match new theme */
+    --sidebar-background: 0 0% 98%; /* Off-white for sidebar, similar to previous light bg */
+    --sidebar-foreground: 20 14% 8%; /* Dark Gray */
+    --sidebar-primary: 27 100% 50%; /* Mango Orange */
+    --sidebar-primary-foreground: 0 0% 100%; /* White */
+    --sidebar-accent: 27 100% 92%; /* Very Light Peach/Orange */
+    --sidebar-accent-foreground: 27 100% 30%; /* Darker Mango */
+    --sidebar-border: 0 0% 85%; /* Light Gray */
+    --sidebar-ring: 27 100% 50%; /* Mango Orange */
+
+    --font-poppins: var(--font-poppins);
+  }
+
+  .font-body {
+    font-family: var(--font-poppins), 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  .dark {
+    --background: 20 12% 8%; /* Very Dark Gray, near black (#1A1817) */
+    --foreground: 0 0% 95%;    /* Light Gray / Off-White */
+    
+    --card: 20 12% 12%;        /* Dark Gray for cards (#24211E) */
+    --card-foreground: 0 0% 95%; 
+    
+    --popover: 20 12% 12%;
+    --popover-foreground: 0 0% 95%;
+    
+    --primary: 27 100% 55%; /* Brighter Mango for dark mode (#FF8C1A) */
+    --primary-foreground: 20 10% 10%; /* Very Dark for text on primary */
+    
+    --secondary: 27 60% 25%; /* Dark, desaturated orange (#663600) */
+    --secondary-foreground: 0 0% 90%; /* Light Gray */
+    
+    --muted: 20 10% 20%; /* Dark Muted Gray (#383532) */
+    --muted-foreground: 0 0% 65%; /* Medium-Light Gray */
+    
+    --accent: 33 85% 60%; /* Brighter Tangerine for dark mode (#F9A13B) */
+    --accent-foreground: 20 10% 10%; /* Very Dark for text on accent */
+    
+    --destructive: 0 60% 50%; /* Slightly desaturated Red */
+    --destructive-foreground: 0 0% 95%;
+    
+    --border: 20 10% 18%; /* Dark Border (#332F2B) */
+    --input: 20 10% 15%; /* Dark Input Background (#2B2825) */
+    --input-border: 20 10% 25%; /* Slightly lighter dark border for input (#45413C) */
+    --ring: 27 100% 55%; /* Mango Orange for focus */
+    
+    --chart-1: 27 100% 55%; /* Primary */
+    --chart-2: 33 85% 60%;  /* Accent */
+    --chart-3: 45 90% 65%;  /* Yellow-Orange */
+    --chart-4: 25 50% 55%;  /* Brownish Orange */
+    --chart-5: 0 0% 70%;    /* Light Gray */
+
+    /* Sidebar colors adjusted for new dark theme */
+    --sidebar-background: 20 12% 10%; /* Even darker for sidebar (#1f1c1a) */
+    --sidebar-foreground: 0 0% 95%; /* Light Gray */
+    --sidebar-primary: 27 100% 55%; /* Mango Orange */
+    --sidebar-primary-foreground: 20 10% 5%; /* Very, very dark for text on primary */
+    --sidebar-accent: 27 60% 20%; /* Darker, more desaturated orange for sidebar accent (#4d3616) */
+    --sidebar-accent-foreground: 0 0% 90%; /* Light Gray */
+    --sidebar-border: 20 10% 15%; /* Darker border for sidebar */
+    --sidebar-ring: 27 100% 55%; /* Mango Orange */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  input {
+    @apply border-input-border;
+  }
+}
+
+/* Poppins font classes */
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}

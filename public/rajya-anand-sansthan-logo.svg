@@ -1,0 +1,22 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:700,400');
+    .title {
+      font-family: 'Poppins', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 64px;
+      fill: #000;
+    }
+    .subtitle {
+      font-family: 'Poppins', Arial, sans-serif;
+      font-weight: 400;
+      font-size: 40px;
+      fill: #000;
+      text-anchor: end;
+    }
+  </style>
+  <!-- Main Title -->
+  <text x="50" y="200" class="title">राज्य आनंद संस्थान</text>
+  <!-- Subtitle, right-aligned so its end coincides with the end of the title -->
+  <text x="590" y="260" class="subtitle">मध्यप्रदेश शासन</text>
+</svg>
